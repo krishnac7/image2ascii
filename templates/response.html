@@ -12,14 +12,16 @@
 </style>
     <script>
 function goBack() {
+
     window.history.back();
+    document.getElementById("back").disabled = true;
 }
 </script>
 </head>
 <body>
 <div class = "container-fluid full">
 <pre  style="font-size:1vw;">{{imageascii}}</pre>
-    <button type="button" class ="btn btn-success" onclick="goBack()">convert one more</button>
+    <button type="button" class ="btn btn-success" id="back" onclick="goBack()">convert one more</button>
     <footer class="page-footer font-small blue" style="font-size:2vw;>
 
 
