@@ -16,7 +16,7 @@
     <h1 class="page-header"> Image to ASCII Art</h1>
 <form method=POST enctype=multipart/form-data action="{{ url_for('upload') }}">
 
-            <center><input class = "btn btn-info" type="file" name="photo" id="file" ></center>
+            <center><input class = "btn btn-info" type="file" name="photo" id="file" accept="image/*" ></center>
 <br/>
     <input class="btn btn-primary" type="submit">
 </form>
