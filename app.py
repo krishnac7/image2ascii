@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request,session
+from flask import Flask, render_template, request
 from flask_uploads import UploadSet, configure_uploads, IMAGES
 
 app = Flask(__name__)
@@ -14,7 +14,7 @@ def upload():
     if request.method == 'POST' and 'photo' in request.files:
         filename = photos.save(request.files['photo'])
         runner(request.files['photo'])
-        session.clear()
+        request.files= None
         return render_template('response.html',imageascii=imageascii)
     return render_template('upload.html')
 
