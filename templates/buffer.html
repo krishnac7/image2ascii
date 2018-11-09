@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Upload</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Bootstrap Image Upload Form</title>
+
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <style>body { padding-top:50px; }.navbar-inverse .navbar-nav > li > a { color: #DBE4E1; }</style>
+</head>
+<body>
+<div class = "container" style="text-align:center">
+    <h1 class="page-header"> Image to ASCII Art</h1>
+<form method=POST enctype=multipart/form-data action="{{ url_for('upload') }}">
+
+            <center><input type="file" name="file" id="file" ></center>
+<br/>
+    <input class="btn btn-primary" type="submit">
+</form>
+
+<footer class="page-footer font-small blue">
+
+
+  <div class="footer-copyright text-center py-3">Source available at:
+    <a href="https://github.com/krishnac7/image2ascii"> github.com/krishnac7</a>
+  </div>
+
+
+</footer>
+
+</div>
+
+</body>
+</html>
